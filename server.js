@@ -23,6 +23,13 @@ app.use(morgan("dev"))
 //routes
 app.use("/api/v1/product",productRoutes);
 
+app.get('/',(req,res)=>{
+    res.status(200).send({
+        "message":"Hello Node Server is Running"
+    })
+})
+
+
 //port 
 const PORT = process.env.PORT||8080;
 
